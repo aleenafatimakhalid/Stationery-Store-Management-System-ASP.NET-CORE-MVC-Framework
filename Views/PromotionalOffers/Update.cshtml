@@ -1,0 +1,48 @@
+﻿
+@model PromotionalOffers
+@{
+    ViewData["Title"] = "Add Offers";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<form method = "post">
+    <div class = "border p-3 mt-4">
+        <div class = "rpw pb-2">
+            <h2 class ="text-primary">
+                Update Offer
+            </h2>
+        </div>
+       
+        
+     
+         <div class = "mb-3">
+            <label asp-for="offerName">  </label> 
+            <input asp-for="offerName" class = "form-control" />
+              <span asp-validation-for = "offerName" class="text-danger"></span>
+        </div>
+
+         <div class = "mb-3">
+            <label asp-for="offerDescription">  </label>
+            <input asp-for="offerDescription" class = "form-control" />
+            <span asp-validation-for = "offerDescription" class="text-danger"></span>
+        </div>
+
+         <div class = "mb-3">
+            <label asp-for="offerDuration">  </label>
+            <input asp-for="offerDuration" class = "form-control" />
+            <span asp-validation-for = "offerDuration" class="text-danger"></span>
+        </div>
+
+        <button type = "submit" class = " btn btn-primary" style="width:150px">Update</button>
+   <a asp-controller = "PromotionalOffers" asp-action="Index" class=" btn btn-secondary" style="width:150px">
+       Back To Offers
+   </a>
+    </div>
+</form>
+
+@section Scripts
+{
+    @{
+         <partial name="_ValidationScriptsPartial" />
+    }
+}

@@ -1,0 +1,72 @@
+﻿@model IEnumerable<PromotionalOffers>
+@{
+    ViewData["Title"] = "View Promotional Offers";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+
+
+<div class = "container p-3">
+    <div class = "row pt-8">
+       <div class = "col-6">
+           <h2 class="text-primary">
+               Promotional Offers List
+           </h2>
+       
+    </div>
+
+     </div>
+<table class = "table table-bordered table-striped" style= "width:100%">
+    <thead>
+        <tr>    
+           
+            <th>
+                Offer ID
+            </th>
+            <th>
+                Offer Name
+            </th>
+            <th>
+                Offer Description
+            </th>
+            <th>
+                Offer Duration
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model)
+        {
+            <tr>
+                <td width = "10%">
+                    @obj.offerID
+                </td>
+
+                <td width = "30%">
+                    @obj.offerName
+                </td>
+                
+                <td width = "40%">
+                    @obj.offerDescription
+                </td>
+                <td width = "10%">
+                    @obj.offerDuration
+                </td> 
+
+                 <td>
+                    <div class="w-75 btn-group" roles="group">
+                        <a asp-controller="PromotionalOffers" asp-action="WishList" asp-route-id=""
+                        class ="btn btn-primary mx-2">Add To WishList </a> 
+                        
+                    </div>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+</div>
+
+
+
