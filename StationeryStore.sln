@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KMAstationeryStore", "KMAstationeryStore\KMAstationeryStore.csproj", "{768157B5-5391-436E-B299-597DC584DDE7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{768157B5-5391-436E-B299-597DC584DDE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{768157B5-5391-436E-B299-597DC584DDE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{768157B5-5391-436E-B299-597DC584DDE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{768157B5-5391-436E-B299-597DC584DDE7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9BB4CF0A-0317-44A2-9287-6CAD494DA42D}
+	EndGlobalSection
+EndGlobal
