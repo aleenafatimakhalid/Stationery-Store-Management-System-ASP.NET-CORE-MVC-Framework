@@ -1,0 +1,67 @@
+﻿
+@model Customer
+@{
+    ViewData["Title"] = "CheckOut";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<form method = "post" >
+    
+    <div class = "border p-3 mt-4">
+        <div class = "rpw pb-2">
+            <h2 class ="text-primary">
+                CheckOut
+            </h2>
+        </div>
+
+         <div class = "mb-3">
+            <label asp-for="CustomerName">  </label>
+            <input asp-for="CustomerName" disabled class = "form-control" />
+            
+        </div>
+
+        
+       
+         <div class = "mb-3">
+            <label asp-for="CustomerPhone">  </label>
+            <input asp-for="CustomerPhone" disabled class = "form-control" />
+          
+        </div>
+
+         <div class = "mb-3">
+            <label asp-for="CustomerStreet">  </label>
+            <input asp-for="CustomerStreet" disabled class = "form-control" />
+           
+        </div>
+
+        <div class = "mb-3">
+            <label asp-for="CustomerSector">  </label>
+            <input asp-for="CustomerSector" disabled class = "form-control" />
+             </div>
+
+             <div class = "mb-3">
+            <label asp-for="CustomerCity">  </label>
+            <input asp-for="CustomerCity" disabled class = "form-control" />
+             </div>
+
+              <div class = "mb-3">
+            <label asp-for="CustomerCountry">  </label>
+            <input asp-for="CustomerCountry" disabled class = "form-control" />
+             
+      
+
+         
+   <a asp-controller = "Customer" asp-action="PayBill" class=" btn btn-secondary" style="width:150px">
+       Pay Bill COD
+   </a>
+
+    </div>
+</form> 
+
+@section Scripts
+{
+    @{
+         <partial name="_ValidationScriptsPartial" />
+    }
+}
+

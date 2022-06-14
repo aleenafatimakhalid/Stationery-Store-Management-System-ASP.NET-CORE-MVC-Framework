@@ -1,0 +1,45 @@
+﻿
+@model Bill
+@{
+    ViewData["Title"] = "PayBill";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<form method = "post" >
+ 
+
+    <div class = "border p-3 mt-4">
+        <div class = "rpw pb-2">
+            <h2 class ="text-primary">
+                Pay Bill Cash On Delivery : Kindly be ready with the total amount on delivery day.
+            </h2>
+        </div>
+
+         <div class = "mb-3">
+            <label asp-for="billId">   </label>
+            <input asp-for="billId" disabled class = "form-control" />
+            
+        </div>
+
+        
+       
+         <div class = "mb-3">
+            <label asp-for="billAmount">  </label>
+            <input asp-for="billAmount" disabled class = "form-control" />
+          
+    
+         
+   <a asp-controller = "Customer" asp-action="OrderPlaced" class=" btn btn-secondary" style="width:150px">
+       Place Order
+   </a>
+
+    </div>
+</form> 
+
+@section Scripts
+{
+    @{
+         <partial name="_ValidationScriptsPartial" />
+    }
+}
+
