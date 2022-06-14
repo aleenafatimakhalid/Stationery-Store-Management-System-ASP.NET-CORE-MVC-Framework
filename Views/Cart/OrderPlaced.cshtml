@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "Order Placed";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+
+<div class="text-center">
+    <h1> Congratulations! You have placed your order!</h1>
+    
+    <img src = "https://franchiseindia.s3.ap-south-1.amazonaws.com/uploads/content/edu/art/5c9deaf2549db.jpeg" alt = "HomeScreen Image" style = "width:900px;height:400px" />
+   
+     <div class=col-6 text-end>
+           <a asp-controller="Customer" asp-action= "HomePage" class ="btn btn-primary">
+               Back To Home
+           </a>
+       </div>
+</div>
