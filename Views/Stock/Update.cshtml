@@ -1,0 +1,46 @@
+﻿@model Stock
+@{
+    ViewData["Title"] = "Stock Add";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<form method = "post">
+    <div class = "border p-3 mt-4">
+        <div class = "rpw pb-2">
+            <h2 class ="text-primary">
+                Update Stock Item
+            </h2>
+        </div>
+        
+        
+         <div class = "mb-3">
+            <label asp-for="itemID">  </label>
+            <input asp-for="itemID" class = "form-control" />
+             <span asp-validation-for = "itemID" class="text-danger"></span>
+        </div>
+
+         <div class = "mb-3">
+            <label asp-for="itemTitle">  </label>
+            <input asp-for="itemTitle" class = "form-control" />
+             <span asp-validation-for = "itemTitle" class="text-danger"></span>
+        </div>
+
+         <div class = "mb-3">
+            <label asp-for="quantity">  </label>
+            <input asp-for="quantity" class = "form-control" />
+             <span asp-validation-for = "quantity" class="text-danger"></span>
+        </div>
+
+        <button type = "submit" class = " btn btn-primary" style="width:150px">Update</button>
+   <a asp-controller = "Stock" asp-action="Index" class=" btn btn-secondary" style="width:150px">
+       Back To Stock
+   </a>
+    </div>
+</form>
+
+@section Scripts
+{
+    @{
+         <partial name="_ValidationScriptsPartial" />
+    }
+}

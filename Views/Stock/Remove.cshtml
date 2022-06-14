@@ -1,0 +1,48 @@
+﻿@model Stock
+@{
+    ViewData["Title"] = "Stock Add";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<form method = "post" asp-action="Remove"> 
+    <input asp-for="stockID" hidden />
+
+    <div class = "border p-3 mt-4">
+        <div class = "rpw pb-2">
+            <h2 class ="text-primary">
+                Delete Stock Item
+            </h2>
+        </div>
+        
+        
+         <div class = "mb-3">
+            <label asp-for="itemID">  </label>
+            <input asp-for="itemID" disabled class = "form-control" />
+            
+        </div>
+
+         <div class = "mb-3">
+            <label asp-for="itemTitle">  </label>
+            <input asp-for="itemTitle" disabled class = "form-control" />
+             
+        </div>
+
+         <div class = "mb-3">
+            <label asp-for="quantity">  </label>
+            <input asp-for="quantity" disabled class = "form-control" />
+             
+        </div>
+
+        <button type = "submit" class = " btn btn-primary" style="width:150px">Delete</button>
+   <a asp-controller = "Stock" asp-action="Index" class=" btn btn-secondary" style="width:150px">
+       Back To Stock
+   </a>
+    </div>
+</form>
+
+@section Scripts
+{
+    @{
+         <partial name="_ValidationScriptsPartial" />
+    }
+}
