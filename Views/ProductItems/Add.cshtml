@@ -1,0 +1,56 @@
+﻿
+@model ProductItem
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<form method = "post">
+    <div class = "border p-3 mt-4">
+        <div class = "rpw pb-2">
+            <h2 class ="text-primary">
+                Add New Item
+            </h2>
+        </div>
+        
+         <div asp-validation-summary = "All" ></div>
+         <div class = "mb-3">
+            <label asp-for="itemTitle">  </label>
+            <input asp-for="itemTitle" class = "form-control" />
+            <span asp-validation-for = "itemTitle" class="text-danger"></span>
+        </div>
+
+        
+       
+         <div class = "mb-3">
+            <label asp-for="category">  </label>
+            <input asp-for="category" class = "form-control" />
+            <span asp-validation-for = "category" class="text-danger"></span>
+        </div>
+
+         <div class = "mb-3">
+            <label asp-for="description">  </label>
+            <input asp-for="description" class = "form-control" />
+            <span asp-validation-for = "description" class="text-danger"></span>
+        </div>
+
+        <div class = "mb-3">
+            <label asp-for="price">  </label>
+            <input asp-for="price" class = "form-control" />
+            <span asp-validation-for = "price" class="text-danger"></span>
+        </div>
+
+        <button type = "submit" class = " btn btn-primary" style="width:150px">Add</button>
+   <a asp-controller = "ProductItems" asp-action="Index" class=" btn btn-secondary" style="width:150px">
+       Back To Products
+   </a>
+    </div>
+</form> 
+
+@section Scripts
+{
+    @{
+         <partial name="_ValidationScriptsPartial" />
+    }
+}
+

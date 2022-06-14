@@ -1,0 +1,55 @@
+﻿
+@model ProductItem
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<form method = "post" asp-action="Remove"> 
+    <input asp-for="itemId" hidden />
+
+    <div class = "border p-3 mt-4">
+        <div class = "rpw pb-2">
+            <h2 class ="text-primary">
+                Delete Existing Item
+            </h2>
+        </div>
+
+         <div class = "mb-3">
+            <label asp-for="itemTitle">  </label>
+            <input asp-for="itemTitle" disabled class = "form-control" />
+           
+        </div>
+
+         <div class = "mb-3">
+            <label asp-for="category">  </label>
+            <input asp-for="category" disabled class = "form-control" />
+            
+        </div>
+
+         <div class = "mb-3">
+            <label asp-for="description">  </label>
+            <input asp-for="description" disabled class = "form-control" />
+            
+        </div>
+
+        <div class = "mb-3">
+            <label asp-for="price">  </label>
+            <input asp-for="price" disabled class = "form-control" />
+
+        </div>
+
+        <button type = "submit" class = " btn btn-danger" style="width:150px">Delete</button>
+   <a asp-controller = "ProductItems" asp-action="Index" class=" btn btn-secondary" style="width:150px">
+       Back To Products
+   </a>
+    </div>
+</form> 
+
+@section Scripts
+{
+    @{
+         <partial name="_ValidationScriptsPartial" />
+    }
+}
+
